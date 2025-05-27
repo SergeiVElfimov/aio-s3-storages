@@ -1,0 +1,1 @@
+# fastapi-s3-storages
