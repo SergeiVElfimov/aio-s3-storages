@@ -28,16 +28,26 @@ async def get_file(
 ## Environment variables
 
 AWS_ACCESS_KEY_ID - Access key.
+
 AWS_SECRET_ACCESS_KEY - Secret key.
+
 AWS_USE_SSL - Use SSL encryption.
+
 AWS_VERIFY - SSL certificate verification.
+
 AWS_ENDPOINT_URL - Host for working with S3.
+
 AWS_CONNECT_TIMEOUT - Maximum connection establishment time.
+
 AWS_READ_TIMEOUT - Maximum data retrieval time.
+
 AWS_ADDRESSING_STYLE - Addressing style.
+
 AWS_SIGNATURE_VERSION - Signature version.
+
 AWS_PROXIES - Proxy.
-AWS_TIME_ZONE_NAME - setting time zone (default value "Europe/Moscow").
+
+AWS_TIME_ZONE_NAME - Setting time zone (default value "Europe/Moscow").
 
 ## Required
 - python >=3.11, <4.0
