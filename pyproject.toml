@@ -23,7 +23,7 @@ ignore_missing_imports = true
 name = "fastapi-s3-storages"
 version = "0.0.1"
 description = "FastAPI S3 storages"
-authors = ["Sergey V. Elfimov <elfimovserg@gmail.com>"]
+authors = ["Sergey V. Elfimov <elfimovserg@gmail.com>", "Rinat Akhtamov <rinaatt@gmail.com>"]
 packages = [{include = "fastapi_s3_storages"}]
 license = "Apache-2.0"
 readme = "README.md"
@@ -48,6 +48,7 @@ SQLAlchemy = ">=1.4.36,<2.1.0"
 pydantic = ">=2.0.0,<3.0.0"
 pydantic-settings = ">=2.0.0"
 python-dotenv = ">=1.0.0"
+tzdata = ">=2024.1"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -66,6 +67,7 @@ pre-commit = "^3.7.1"
 pytest = "^8.2.2"
 pytest-asyncio = "^0.23.7"
 pytest-cov = "^5.0.0"
+pytest-mock = "^3.10.0"
 python-lsp-server = "^1.11.0"
 requests = "^2.32.3"
 tomli = "^2.0.1"
@@ -78,6 +80,9 @@ pydantic = {extras = ["email"], version="^2.7.4"}
 nox = "^2024.4.15"
 ruff = "^0.5.0"
 urllib3 = "<=2.2.2"
+moto = "^4.2.11"
+Flask = ">=0.9"
+flask-cors = "^5.0.0"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
@@ -139,3 +144,6 @@ convention = "pep257"
 quote-style = "double"
 indent-style = "space"
 skip-magic-trailing-comma = false
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
