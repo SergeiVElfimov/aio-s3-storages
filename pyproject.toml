@@ -23,7 +23,7 @@ ignore_missing_imports = true
 name = "fastapi-s3-storages"
 version = "0.0.1"
 description = "FastAPI S3 storages"
-authors = ["Sergey V. Elfimov <elfimovserg@gmail.com>"]
+authors = ["Sergey V. Elfimov <elfimovserg@gmail.com>", "Rinat Akhtamov <rinaatt@gmail.com>"]
 packages = [{include = "fastapi_s3_storages"}]
 license = "Apache-2.0"
 readme = "README.md"

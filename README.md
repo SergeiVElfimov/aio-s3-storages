@@ -69,3 +69,7 @@ pip install poetry
 poetry install
 pytest
 ```
+
+## Acknowledgments
+
+I express my deep gratitude for the help in working on the project [Rinat Akhtamov](https://github.com/rinaatt )
