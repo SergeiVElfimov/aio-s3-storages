@@ -58,7 +58,7 @@ AWS_TIME_ZONE_NAME - Setting time zone (default value "Europe/Moscow").
 - python-dotenv >=1.0.0
 
 ## Installation
-```pip install django-excel-viewset```
+```pip install fastapi-s3-storages```
 
 ## Contribution
 
