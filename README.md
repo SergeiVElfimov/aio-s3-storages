@@ -50,14 +50,21 @@ AWS_PROXIES - Proxy.
 AWS_TIME_ZONE_NAME - Setting time zone (default value "Europe/Moscow").
 
 ## Required
+
 - python >=3.11, <4.0
+- aioboto3 >=12.4.0, <14.0
 - fastapi >=0.100.0, <1.0
 - SQLAlchemy >=1.4.36, <2.1.0
 - pydantic >=2.0.0, <3.0.0
 - pydantic-settings >=2.0.0
 - python-dotenv >=1.0.0
+- tzdata = >=2024.1
+
+
+
 
 ## Installation
+
 ```pip install fastapi-s3-storages```
 
 ## Contribution
