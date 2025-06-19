@@ -60,22 +60,9 @@ AWS_TIME_ZONE_NAME - Setting time zone (default value "Europe/Moscow").
 - python-dotenv >=1.0.0
 - tzdata = >=2024.1
 
-
-
-
 ## Installation
 
 ```pip install fastapi-s3-storages```
-
-## Contribution
-
-You can run tests with `pytest`.
-
-```
-pip install poetry
-poetry install
-pytest
-```
 
 ## Acknowledgments
 
