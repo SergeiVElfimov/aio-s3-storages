@@ -64,6 +64,10 @@ AWS_TIME_ZONE_NAME - Setting time zone (default value "Europe/Moscow").
 
 ```pip install fastapi-s3-storages```
 
+## Contributing
+
+Before contributing please read our [contributing guidelines](CONTRIBUTING.md).
+
 ## Acknowledgments
 
 I express my deep gratitude for the help in working on the project [Rinat Akhtamov](https://github.com/rinaatt )
