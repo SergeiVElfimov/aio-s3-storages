@@ -1,15 +1,13 @@
 [tool.mypy]
 mypy_path = [
-  "fastapi_s3_storages",
+  "aio_s3_storages",
 ]
 exclude = [
     "tests",
 ]
 show_error_codes = true
 check_untyped_defs = true
-plugins = [
-  "sqlalchemy.ext.mypy.plugin",
-]
+
 
 [[tool.mypy.overrides]]
 module = [
@@ -20,14 +18,14 @@ module = [
 ignore_missing_imports = true
 
 [tool.poetry]
-name = "fastapi-s3-storages"
+name = "aio-s3-storages"
 version = "0.0.1"
-description = "FastAPI S3 storages"
+description = "Asyncio-based library. S3 backend storage to simplify file management."
 authors = ["Sergey V. Elfimov <elfimovserg@gmail.com>", "Rinat Akhtamov <rinaatt@gmail.com>"]
-packages = [{include = "fastapi_s3_storages"}]
+packages = [{include = "aio_s3_storages"}]
 license = "Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/SergeiVElfimov/fastapi-s3-storages"
+repository = "https://github.com/SergeiVElfimov/aio-s3-storages"
 classifiers = [
     "Natural Language :: English",
     "Framework :: FastAPI",
@@ -43,8 +41,6 @@ classifiers = [
 [tool.poetry.dependencies]
 python = ">=3.11,<4.0"
 aioboto3 = ">=12.4.0, <14.0"
-fastapi = ">=0.100.0,<1.0"
-SQLAlchemy = ">=1.4.36,<2.1.0"
 pydantic = ">=2.0.0,<3.0.0"
 pydantic-settings = ">=2.0.0"
 python-dotenv = ">=1.0.0"
@@ -52,9 +48,6 @@ tzdata = ">=2024.1"
 
 
 [tool.poetry.group.dev.dependencies]
-Faker = "^26.0.0"
-SQLAlchemy-Utils = "^0.41.2"
-aiosqlite = "^0.20.0"
 bandit = "^1.7.9"
 flynt = "^1.0.1"
 greenlet = "^3.0.3"
@@ -75,7 +68,6 @@ types-click = "^7.1.8"
 types-setuptools = "^70.1.0.20240627"
 typing-extensions = "^4.12.2"
 types-aiobotocore-s3 = "^2.22.0"
-uvicorn = "^0.30.1"
 pydantic = {extras = ["email"], version="^2.7.4"}
 nox = "^2024.4.15"
 ruff = "^0.5.0"
@@ -135,7 +127,7 @@ dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
 [tool.ruff.lint.isort]
 known-first-party = [
-  "fastapi_filter_sqlalchemy",
+  "aio_s3_storages",
 ]
 [tool.ruff.lint.pydocstyle]
 convention = "pep257"

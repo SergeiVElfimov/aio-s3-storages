@@ -1,4 +1,4 @@
-# fastapi-s3-storages
+# aio-s3-storages
 
 S3 backend storage to simplify file management in FastAPI.
 Similar to django-storages project.
@@ -7,22 +7,21 @@ Similar to django-storages project.
 
 ```python
 from partners_utils.storage import S3Storage
+
+
 class TestS3Storage(S3Storage):
     bucket_name = "Bucket name"
     location = "Folder name"
 
-from partners_utils.storage import FileStreamingResponse
-@router.get(
-    "/test-file/{attachment_id}/",
-    response_class=FileStreamingResponse,
-    summary="Get file",
-)
-async def get_file(
-    attachment_id: UUID,
-    attachment_service: TestService = Depends(),
-):
-    attachment = await attachment_service.get_attachment(attachment_id=attachment_id)
-    return FileStreamingResponse(storage=attachment_service.storage, filename=attachment.name, path=attachment.file)
+storage = TestS3Storage()
+# get file by name
+await self.storage.open(name="path_to_file")
+# save file to s3 from local storage
+with open("path_to_file_into_local_storage", "rb") as _file:
+    extra_args = {"ContentType": "content_type_file"}
+    await self.storage.save(name="path_to_file", content=_file, extra_args=extra_args)
+# delete file
+await self.storage.delete(name="path_to_file")
 ```
 
 ## Environment variables
@@ -53,8 +52,6 @@ AWS_TIME_ZONE_NAME - Setting time zone (default value "Europe/Moscow").
 
 - python >=3.11, <4.0
 - aioboto3 >=12.4.0, <14.0
-- fastapi >=0.100.0, <1.0
-- SQLAlchemy >=1.4.36, <2.1.0
 - pydantic >=2.0.0, <3.0.0
 - pydantic-settings >=2.0.0
 - python-dotenv >=1.0.0
@@ -62,7 +59,7 @@ AWS_TIME_ZONE_NAME - Setting time zone (default value "Europe/Moscow").
 
 ## Installation
 
-```pip install fastapi-s3-storages```
+```pip install aio-s3-storages```
 
 ## Contributing
 
@@ -70,4 +67,4 @@ Before contributing please read our [contributing guidelines](CONTRIBUTING.md).
 
 ## Acknowledgments
 
-I express my deep gratitude for the help in working on the project [Rinat Akhtamov](https://github.com/rinaatt )
+I express my deep gratitude for the help in working on the project [Rinat Akhtamov](https://github.com/rinaatt) and [Albert Alexandrov](https://github.com/albertalexandrov)
