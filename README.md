@@ -1,6 +1,6 @@
 # aio-s3-storages
 
-S3 backend storage to simplify file management in FastAPI.
+S3 backend storage to simplify file management.
 Similar to django-storages project.
 
 ## Examples
