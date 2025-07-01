@@ -2,6 +2,7 @@
 
 [![build-status-image]][build-status]
 [![pypi-version]][pypi]
+[![codeql-image]][codeql]
 
 S3 backend storage to simplify file management.
 Similar to django-storages project.
@@ -76,3 +77,5 @@ I express my deep gratitude for the help in working on the project [Rinat Akhtam
 [build-status]: https://github.com/SergeiVElfimov/aio-s3-storages/actions/workflows/python-package.yml
 [pypi-version]: https://img.shields.io/pypi/v/aio-s3-storages.svg
 [pypi]: https://pypi.org/project/aio-s3-storages/
+[codeql-image]: https://github.com/SergeiVElfimov/aio-s3-storages/actions/workflows/codeql.yml/badge.svg
+[codeql]: https://github.com/SergeiVElfimov/aio-s3-storages/actions/workflows/codeql.yml
