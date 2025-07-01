@@ -1,5 +1,8 @@
 # aio-s3-storages
 
+[![build-status-image]][build-status]
+[![pypi-version]][pypi]
+
 S3 backend storage to simplify file management.
 Similar to django-storages project.
 
@@ -68,3 +71,8 @@ Before contributing please read our [contributing guidelines](CONTRIBUTING.md).
 ## Acknowledgments
 
 I express my deep gratitude for the help in working on the project [Rinat Akhtamov](https://github.com/rinaatt) and [Albert Alexandrov](https://github.com/albertalexandrov)
+
+[build-status-image]: https://github.com/SergeiVElfimov/aio-s3-storages/actions/workflows/python-package.yml/badge.svg
+[build-status]: https://github.com/SergeiVElfimov/aio-s3-storages/actions/workflows/python-package.yml
+[pypi-version]: https://img.shields.io/pypi/v/aio-s3-storages.svg
+[pypi]: https://pypi.org/project/aio-s3-storages/
