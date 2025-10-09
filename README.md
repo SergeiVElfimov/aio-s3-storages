@@ -11,7 +11,7 @@ Similar to django-storages project.
 ## Examples
 
 ```python
-from partners_utils.storage import S3Storage
+from aio_s3_storages.storage import S3Storage
 
 
 class TestS3Storage(S3Storage):
