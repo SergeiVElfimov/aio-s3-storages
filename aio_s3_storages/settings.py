@@ -13,7 +13,6 @@ class S3Settings(BaseSettings):
     access_key_id: str = ""
     secret_access_key: str = ""
     bucket_name: str = ""
-    pp_bucket_name: str = ""
     use_ssl: bool = True
     verify: bool = True
     endpoint_url: str = ""
