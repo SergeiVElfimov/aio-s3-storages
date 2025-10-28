@@ -19,7 +19,7 @@ ignore_missing_imports = true
 
 [tool.poetry]
 name = "aio-s3-storages"
-version = "0.0.1"
+version = "0.0.2"
 description = "Asyncio-based library. S3 backend storage to simplify file management."
 authors = ["Sergey V. Elfimov <elfimovserg@gmail.com>", "Rinat Akhtamov <rinaatt@gmail.com>"]
 packages = [{include = "aio_s3_storages"}]
